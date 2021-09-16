@@ -1,0 +1,34 @@
+{
+  "name": "a1-movies-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js -e js",
+    "start": "node src/app.js",
+    "mkdir": "mkdirp submission",
+    "log-to-file": "npm run start > submission/test.log 2>&1",
+    "copy-src": "copyfiles package.json src/* src/**/* submission",
+    "copy-data": "copyfiles data/**/* submission",
+    "prezip": "rimraf submission.zip",
+    "zip": "bestzip submission.zip submission/",
+    "clean": "rimraf submission submission.zip",
+    "preprepare-submission": "rimraf submission",
+    "prepare-submission": "run-s -n -c mkdir copy-src log-to-file copy-data zip"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "bestzip": "^2.2.0",
+    "copyfiles": "^2.4.1",
+    "mkdirp": "^1.0.4",
+    "npm-run-all": "^4.1.5",
+    "progress": "^2.0.3",
+    "rimraf": "^3.0.2"
+  }
+}
