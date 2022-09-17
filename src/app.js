@@ -19,7 +19,7 @@ const outputFolder = './data'
 
 /**
  * fetchPage fetches a series of superheroe information from the server.
- * Each response contains up to 50 superheroes per page and this function
+ * Each response contains up to 10 superheroes per page and this function
  * needs to fetch only one page. The page number is specified by the
  * "pageNumber" argument provided to the function.
  * 
@@ -40,10 +40,10 @@ const outputFolder = './data'
  *      ...
  *    ],
  *    "indexStart":0,
- *    "indexEnd":49,
- *    "perPage":50,
+ *    "indexEnd":9,
+ *    "perPage":10,
  *    "pageNum":1,
- *    "pageCount":910
+ *    "pageCount":57
  * }
  * 
  * Note that the pageNum is shown as 1, which is the default page
@@ -113,22 +113,22 @@ async function fetchPage(pageNumber) {
  *      ...
  *    ],
  *    "indexStart":0,
- *    "indexEnd":49,
- *    "perPage":50,
+ *    "indexEnd":9,
+ *    "perPage":10,
  *    "pageNum":1,
- *    "pageCount":910
+ *    "pageCount":57
  *  },
  *  {
  *    "data": [
- *      { Superhero 51 info },
- *      { Superhero 52 info },
+ *      { Superhero 11 info },
+ *      { Superhero 12 info },
  *      ...
  *    ],
- *    "indexStart":50,
- *    "indexEnd":99,
- *    "perPage":50,
+ *    "indexStart":10,
+ *    "indexEnd":19,
+ *    "perPage":10,
  *    "pageNum":2,
- *    "pageCount":910
+ *    "pageCount":57
  *  },
  *  ...
  * ]
@@ -218,8 +218,8 @@ async function start() {
 
   console.log('==========================================')
 
-  console.log('Testing asynchronous fetch for 100 pages')
-  await fetchAsynchronously(100)
+  console.log('Testing asynchronous fetch for 57 pages')
+  await fetchAsynchronously(57)
   console.log(`Elapsed: ${pbar.getPbarElapsed()}`)
 }
 
