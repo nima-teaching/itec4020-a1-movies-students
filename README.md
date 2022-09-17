@@ -1,11 +1,11 @@
-# AP/ITEC4020 Assignment 1: Movies API
+# AP/ITEC4020 Assignment 1: Superheroes API
 
 In this assignment, our goal is to interface with an external API and query information
-about movies in the database using HTTP enpoints. Please read the PDF instructions on
+about superheroes in the database using HTTP endpoints. Please read the PDF instructions on
 eClass to understand what is needed to complete the assignment.
 
-- API Endpoint: https://itec4020-a1.k.nima-dev.com/movies
-- Dataset: https://www.kaggle.com/rounakbanik/the-movies-dataset
+- API Endpoint: https://itec4020-a1.k.nima-dev.com/superheroes
+- Original source of data: https://www.superheroapi.com/
 
 ## Commands
 
@@ -35,7 +35,7 @@ npm run prepare-submission
 
 ## Desired Output
 
-A successfull execution of the code would result in an output similar to the following:
+A successful execution of the code would result in an output similar to the following:
 
 ```log
 $ npm run start

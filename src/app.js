@@ -18,14 +18,14 @@ const axios = require('axios').default
 const outputFolder = './data'
 
 /**
- * fetchPage fetches a series of movie information from the server.
- * Each response contains up to 50 movies per page and this function
+ * fetchPage fetches a series of superheroe information from the server.
+ * Each response contains up to 50 superheroes per page and this function
  * needs to fetch only one page. The page number is specified by the
  * "pageNumber" argument provided to the function.
  * 
  * To function, you need to know the server url and how to specify
  * the page number when sending a request to the server. The server
- * is hosted at "https://itec4020-a1.k.nima-dev.com/movies". You can
+ * is hosted at "https://itec4020-a1.k.nima-dev.com/superheroes". You can
  * open this url in your browser to see the information you will
  * receive when making a request. When no page number is specified,
  * the server defaults to page 1. You can see if the server has
@@ -35,8 +35,8 @@ const outputFolder = './data'
  * 
  * {
  *    "data": [
- *      { Movie 1 info },
- *      { Movie 2 info },
+ *      { Superhero 1 info },
+ *      { Superhero 2 info },
  *      ...
  *    ],
  *    "indexStart":0,
@@ -57,7 +57,7 @@ const outputFolder = './data'
  * number, you need to specify the "GET parameter" "pageNum". For example, when
  * you open the following url, you can see that the response shows the
  * parsed pageNum to be 10 instead of the default 1:
- * https://itec4020-a1.k.nima-dev.com/movies?pageNum=10
+ * https://itec4020-a1.k.nima-dev.com/superheroes?pageNum=10
  * 
  * Now that you understand the server's API, let's talk about axios,
  * the library that you will be using to make the request. It is
@@ -108,8 +108,8 @@ async function fetchPage(pageNumber) {
  * [
  *  {
  *    "data": [
- *      { Movie 1 info },
- *      { Movie 2 info },
+ *      { Superhero 1 info },
+ *      { Superhero 2 info },
  *      ...
  *    ],
  *    "indexStart":0,
@@ -120,8 +120,8 @@ async function fetchPage(pageNumber) {
  *  },
  *  {
  *    "data": [
- *      { Movie 51 info },
- *      { Movie 52 info },
+ *      { Superhero 51 info },
+ *      { Superhero 52 info },
  *      ...
  *    ],
  *    "indexStart":50,
@@ -160,7 +160,7 @@ async function fetchSynchronously(pageCount) {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all
  * 
  * @param {Number} pageCount 
- * @returns {Array} an array containing the movie info in all pages merged in a single array
+ * @returns {Array} an array containing the superhero info in all pages merged in a single array
  */
 async function fetchAsynchronously(pageCount) {
   console.log(`fetching ${pageCount} items asynchronously`)
